@@ -77,3 +77,12 @@ $RECYCLE.BIN/
 
 # Windows shortcuts
 *.lnk
+*.classpath
+.mvn/wrapper/maven-wrapper.jar
+*.properties
+.settings/org.eclipse.core.resources.prefs
+*.prefs
+.settings/org.eclipse.wst.common.project.facet.core.xml
+*.springBeans
+.project
+target/*
