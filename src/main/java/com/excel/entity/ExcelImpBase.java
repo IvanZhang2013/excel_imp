@@ -5,101 +5,74 @@ import java.io.Serializable;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.IdClass;
 import javax.persistence.Table;
 
-@Entity
-@Table(name = "map_location")
-public class ExcelImpBase implements Serializable {
+import com.excel.entity.pk.ExcelImpBasePK;
 
-	private static final long serialVersionUID = -6594630833024506084L;
+@Entity
+@IdClass(ExcelImpBasePK.class)
+@Table(name = "excel_imp_base")
+public class ExcelImpBase implements Serializable {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 67533406461338270L;
 
 	@Id
-	@Column(name = "id", length = 20)
-	private String id;
+	@Column(name = "app_id")
+	private String appId;
 
-	@Column(name = "address", length = 20)
-	private String address;
+	@Column(name = "app_nm")
+	private String appName;
 
-	@Column(name = "city", length = 20)
-	private String city;
+	@Column(name = "produce_nm")
+	private String produce;
+	@Id
+	@Column(name = "temp_table_id")
+	private String tempTableId;
 
-	@Column(name = "lat", length = 20)
-	private String lat;
+	public ExcelImpBase() {
 
-	@Column(name = "lng", length = 20)
-	private String lng;
-
-	@Column(name = "re_status", length = 20)
-	private String status;
-
-	@Column(name = "confidence", length = 20)
-	private String confidence;
-
-	@Column(name = "precise", length = 20)
-	private String precise;
-
-	public String getId() {
-		return id;
 	}
 
-	public void setId(String id) {
-		this.id = id;
+	public ExcelImpBase(String appId, String appName, String produce, String tempTableId) {
+		this.appId = appId;
+		this.appName = appName;
+		this.produce = produce;
+		this.tempTableId = tempTableId;
 	}
 
-	public String getAddress() {
-		return address;
+	public String getAppId() {
+		return appId;
 	}
 
-	public void setAddress(String address) {
-		this.address = address;
+	public void setAppId(String appId) {
+		this.appId = appId;
 	}
 
-	public String getCity() {
-		return city;
+	public String getAppName() {
+		return appName;
 	}
 
-	public void setCity(String city) {
-		this.city = city;
+	public void setAppName(String appName) {
+		this.appName = appName;
 	}
 
-	public String getLat() {
-		return lat;
+	public String getProduce() {
+		return produce;
 	}
 
-	public void setLat(String lat) {
-		this.lat = lat;
+	public void setProduce(String produce) {
+		this.produce = produce;
 	}
 
-	public String getLng() {
-		return lng;
+	public String getTempTableId() {
+		return tempTableId;
 	}
 
-	public void setLng(String lng) {
-		this.lng = lng;
-	}
-
-	public String getStatus() {
-		return status;
-	}
-
-	public void setStatus(String status) {
-		this.status = status;
-	}
-
-	public String getConfidence() {
-		return confidence;
-	}
-
-	public void setConfidence(String confidence) {
-		this.confidence = confidence;
-	}
-
-	public String getPrecise() {
-		return precise;
-	}
-
-	public void setPrecise(String precise) {
-		this.precise = precise;
+	public void setTempTableId(String tempTableId) {
+		this.tempTableId = tempTableId;
 	}
 
 }

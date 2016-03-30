@@ -8,98 +8,90 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "map_location")
+@Table(name = "table_columns")
 public class TableColumns implements Serializable {
 
-	private static final long serialVersionUID = -6594630833024506084L;
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 8586228311611563160L;
 
 	@Id
-	@Column(name = "id", length = 20)
-	private String id;
+	@Column(name = "column_id")
+	private Integer columnId;
 
-	@Column(name = "address", length = 20)
-	private String address;
+	@Column(name = "column_nm", length = 20)
+	private String columnNm;
 
-	@Column(name = "city", length = 20)
-	private String city;
+	@Column(name = "column_regex", length = 20)
+	private String columnRegex;
 
-	@Column(name = "lat", length = 20)
-	private String lat;
+	@Column(name = "column_remark", length = 20)
+	private String columnRemark;
 
-	@Column(name = "lng", length = 20)
-	private String lng;
+	@Column(name = "column_code", length = 20)
+	private String columnCode;
 
-	@Column(name = "re_status", length = 20)
-	private String status;
+	@Column(name = "require", length = 20)
+	private String require;
 
-	@Column(name = "confidence", length = 20)
-	private String confidence;
+	@Column(name = "table_name_id", length = 20)
+	private String tableNameId;
 
-	@Column(name = "precise", length = 20)
-	private String precise;
-
-	public String getId() {
-		return id;
+	public Integer getColumnId() {
+		return columnId;
 	}
 
-	public void setId(String id) {
-		this.id = id;
+	public void setColumnId(Integer columnId) {
+		this.columnId = columnId;
 	}
 
-	public String getAddress() {
-		return address;
+	public String getColumnNm() {
+		return columnNm;
 	}
 
-	public void setAddress(String address) {
-		this.address = address;
+	public void setColumnNm(String columnNm) {
+		this.columnNm = columnNm;
 	}
 
-	public String getCity() {
-		return city;
+	public String getColumnRegex() {
+		return columnRegex;
 	}
 
-	public void setCity(String city) {
-		this.city = city;
+	public void setColumnRegex(String columnRegex) {
+		this.columnRegex = columnRegex;
 	}
 
-	public String getLat() {
-		return lat;
+	public String getColumnRemark() {
+		return columnRemark;
 	}
 
-	public void setLat(String lat) {
-		this.lat = lat;
+	public void setColumnRemark(String columnRemark) {
+		this.columnRemark = columnRemark;
 	}
 
-	public String getLng() {
-		return lng;
+	public String getColumnCode() {
+		return columnCode;
 	}
 
-	public void setLng(String lng) {
-		this.lng = lng;
+	public void setColumnCode(String columnCode) {
+		this.columnCode = columnCode;
 	}
 
-	public String getStatus() {
-		return status;
+	public String getRequire() {
+		return require;
 	}
 
-	public void setStatus(String status) {
-		this.status = status;
+	public void setRequire(String require) {
+		this.require = require;
 	}
 
-	public String getConfidence() {
-		return confidence;
+	public String getTableNameId() {
+		return tableNameId;
 	}
 
-	public void setConfidence(String confidence) {
-		this.confidence = confidence;
-	}
-
-	public String getPrecise() {
-		return precise;
-	}
-
-	public void setPrecise(String precise) {
-		this.precise = precise;
+	public void setTableNameId(String tableNameId) {
+		this.tableNameId = tableNameId;
 	}
 
 }

@@ -7,7 +7,6 @@ import org.springframework.stereotype.Service;
 import com.excel.entity.TableColumns;
 import com.excel.models.TableColumnsDao;
 
-
 /**
  * User业务层，依赖持久层 IUserDao
  * 
@@ -16,18 +15,11 @@ import com.excel.models.TableColumnsDao;
  */
 @Service
 public class TableColumnsService {
-	
+
 	@Resource
-	private TableColumnsDao tableColumnDao;
-	
-	
-	public void saveMapLocation(TableColumns tableColumns) {
-		tableColumnDao.save(tableColumns);
-	}
+	private TableColumnsDao tableColumnsDao;
 
-
-	public List<TableColumns> findAllUsers() {
-		return (List<TableColumns>) tableColumnDao.findAll();
+	public List<TableColumns> findAllTableName(String tableNameId) {
+		return tableColumnsDao.findAllTableName(tableNameId);
 	}
-	
 }
